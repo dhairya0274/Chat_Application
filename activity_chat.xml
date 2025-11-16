@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/top_layout"
+        android:layout_marginTop="35dp"
+        android:orientation="horizontal"
+        android:background="@color/my_primary">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:src="@drawable/back_button_image"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/my_primary"
+            android:id="@+id/backButton" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:id="@+id/chatName"
+            android:layout_marginLeft="30dp"
+            android:textSize="20dp"
+            android:hint="hello"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_below="@id/top_layout"
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/sendMessageLayout"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sendMessageLayout"
+        android:layout_alignParentBottom="true">
+
+        <EditText
+            android:id="@+id/messageEnd"
+            android:padding="15dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:hint="Message"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:id="@+id/sendMessage"
+            android:src="@drawable/send_image"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
